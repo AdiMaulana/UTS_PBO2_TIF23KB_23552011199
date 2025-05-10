@@ -6,16 +6,16 @@
 
 ## Profil
 <ul>
-  <li>Nama: {nama}</li>
-  <li>NIM: {nim}</li>
-  <li>Studi Kasus: {studi kasus}</li>
+  <li>Nama: Adi Maulana Amin</li>
+  <li>NIM: 23552011199</li>
+  <li>Studi Kasus: Kasir Asuransi</li>
 </ul>
 
 ## Judul Studi Kasus
-<p>Lorem ipsum sir dolor amet.</p>
+<p>Kasir Asuransi.</p>
 
 ## Penjelasan Studi Kasus
-<p>Lorem ipsum sir dolor amet.</p>
+<p><strong>Deskripsi: </strong>Kasir untuk pengelolaan premi dan klaim asuransi.</p>
 
 ## Penjelasan 4 Pilar OOP dalam Studi Kasus
 
