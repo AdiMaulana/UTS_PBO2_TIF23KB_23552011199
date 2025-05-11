@@ -21,6 +21,25 @@ public class KlaimDaoImpl implements KlaimDao {
             ps.executeUpdate();
         }
     }
+    
+    @Override
+    public List<Klaim> getSemuaKlaim() throws Exception {
+        List<Klaim> list = new ArrayList<>();
+        String sql = "SELECT * FROM klaim";
+        try (Connection con = DatabaseConnection.getConnection();
+             Statement st = con.createStatement();
+             ResultSet rs = st.executeQuery(sql)) {
+            while (rs.next()) {
+                Klaim klaim = new Klaim();
+                klaim.setId(rs.getInt("id"));
+                klaim.setPolisId(rs.getInt("polis_id"));
+                klaim.setTanggal(rs.getDate("tanggal"));
+                klaim.setStatus(rs.getString("status"));
+                list.add(klaim);
+            }
+        }
+        return list;
+    }
 
     @Override
     public List<Klaim> findByPolisId(int polisId) throws Exception {

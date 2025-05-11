@@ -11,7 +11,7 @@ public class NasabahDaoImpl implements NasabahDao {
 
     @Override
     public void save(Nasabah nasabah) throws Exception {
-        String sql = "INSERT INTO nasabah (nama, umur) VALUES (?, ?)";
+        String sql = "INSERT INTO nasabah (nama, umur) VALUES (?, ?) ;";
         try (Connection con = DatabaseConnection.getConnection();
              PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             ps.setString(1, nasabah.getNama());

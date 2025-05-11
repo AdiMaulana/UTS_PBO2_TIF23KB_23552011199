@@ -9,6 +9,7 @@ import com.insurance.entity.Polis;
 import com.insurance.service.LayananAsuransi;
 
 import java.sql.Date;
+import java.util.List;
 import java.util.Scanner;
 
 public class LayananAsuransiServiceImpl implements LayananAsuransi {
@@ -49,5 +50,10 @@ public class LayananAsuransiServiceImpl implements LayananAsuransi {
         } catch (Exception e) {
             System.err.println("Error saat proses klaim: " + e.getMessage());
         }
+    }
+    
+    @Override
+    public List<Klaim> semuaKlaim() throws Exception {
+        return klaimDao.getSemuaKlaim();
     }
 }
