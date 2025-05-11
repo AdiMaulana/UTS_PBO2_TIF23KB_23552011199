@@ -27,36 +27,34 @@ insurance/
 │ └── com/
 │ └── insurance/
 │ ├── dao/
+│ │ ├── KlaimDao.java
 │ │ ├── NasabahDao.java
-│ │ ├── PolisDao.java
-│ │ └── KlaimDao.java
+│ │ └── PolisDao.java
 │ │
 │ ├── dao/
 │ │ └── impl/
-│ │ ├── NasabahDaoImpl.java
-│ │ ├── PolisDaoImpl.java
-│ │ └── KlaimDaoImpl.java
+│ │     ├── KlaimDaoImpl.java
+│ │     ├── NasabahDaoImpl.java
+│ │     └── PolisDaoImpl.java
 │ │
 │ ├── service/
+│ │ ├── LayananAsuransi.java
 │ │ ├── NasabahService.java
-│ │ ├── PolisService.java
-│ │ ├── KlaimService.java
-│ │ └── LayananAsuransi.java
+│ │ └── PolisService.java
 │ │
 │ ├── service/
 │ │ └── impl/
-│ │ ├── NasabahServiceImpl.java
-│ │ ├── PolisServiceImpl.java
-│ │ ├── KlaimServiceImpl.java
-│ │ └── LayananAsuransiServiceImpl.java
+│ │     ├── LayananAsuransiServiceImpl.java
+│ │     ├── NasabahServiceImpl.java
+│ │     └── PolisServiceImpl.java
 │ │
 │ ├── entity/
-│ │ ├── Nasabah.java
-│ │ ├── Polis.java
-│ │ ├── Klaim.java
 │ │ ├── Asuransi.java
+│ │ ├── AsuransiJiwa.java
 │ │ ├── AsuransiKesehatan.java
-│ │ └── AsuransiJiwa.java
+│ │ ├── Klaim.java
+│ │ ├── Nasabah.java
+│ │ └── Polis.java
 │ │
 │ ├── util/
 │ │ └── DatabaseConnection.java
