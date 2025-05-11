@@ -19,6 +19,82 @@
 
 Proyek **Kasir Asuransi** ini merupakan aplikasi berbasis Java yang mengelola premi dan klaim asuransi dengan menerapkan konsep **Konsep OOP** berikut: Inheritance, Encapsulation, Polymorphism, dan Abstraction.
 
+# Struktur Project Kasir Asuransi
+
+insurance/
+│
+├── src/
+│ └── com/
+│ └── insurance/
+│ ├── dao/
+│ │ ├── NasabahDao.java
+│ │ ├── PolisDao.java
+│ │ └── KlaimDao.java
+│ │
+│ ├── dao/
+│ │ └── impl/
+│ │ ├── NasabahDaoImpl.java
+│ │ ├── PolisDaoImpl.java
+│ │ └── KlaimDaoImpl.java
+│ │
+│ ├── service/
+│ │ ├── NasabahService.java
+│ │ ├── PolisService.java
+│ │ ├── KlaimService.java
+│ │ └── LayananAsuransi.java
+│ │
+│ ├── service/
+│ │ └── impl/
+│ │ ├── NasabahServiceImpl.java
+│ │ ├── PolisServiceImpl.java
+│ │ ├── KlaimServiceImpl.java
+│ │ └── LayananAsuransiServiceImpl.java
+│ │
+│ ├── entity/
+│ │ ├── Nasabah.java
+│ │ ├── Polis.java
+│ │ ├── Klaim.java
+│ │ ├── Asuransi.java
+│ │ ├── AsuransiKesehatan.java
+│ │ └── AsuransiJiwa.java
+│ │
+│ ├── util/
+│ │ └── DatabaseConnection.java
+│ │
+│ └── MainApp.java
+├── README.md
+├── pom.xml (jika menggunakan Maven)
+└── lib/ (jika ada library eksternal seperti MySQL Connector/J)
+
+---
+
+## Penjelasan Struktur
+
+- **dao/**  
+  Package berisi interface DAO untuk akses data ke database mysql.
+
+- **dao.impl/**  
+  Package berisi implementasi DAO (Data Access Object).
+
+- **service/**  
+  Package berisi interface service untuk logika bisnis.
+
+- **service.impl/**  
+  Package berisi implementasi service logic.
+
+- **entity/**  
+  Model kelas yang merepresentasikan data dan konsep domain.
+
+- **util/**  
+  Kelas utilitas seperti koneksi database dan helper.
+
+- **MainApp.java**  
+  Kelas utama aplikasi dengan menu interaktif berbasis console.
+
+---
+
+Struktur ini memudahkan pengembangan, pemeliharaan, dan testing aplikasi Kasir Asuransi.
+
 ---
 ## Penjelasan 4 Pilar OOP dalam Studi Kasus
 
