@@ -17,19 +17,50 @@
 ## Penjelasan Studi Kasus
 <p><strong>Deskripsi: </strong>Kasir untuk pengelolaan premi dan klaim asuransi.</p>
 
+Proyek **Kasir Asuransi** ini merupakan aplikasi berbasis Java yang mengelola premi dan klaim asuransi dengan menerapkan konsep **Konsep OOP** berikut: Inheritance, Encapsulation, Polymorphism, dan Abstraction.
+
+---
 ## Penjelasan 4 Pilar OOP dalam Studi Kasus
 
-### 1. Inheritance
-<p>Lorem ipsum sir dolor amet.</p>
+### 1. Inheritance (Pewarisan)
 
-### 2. Encapsulation
-<p>Lorem ipsum sir dolor amet.</p>
+Inheritance memungkinkan kelas anak mewarisi atribut dan metode dari kelas induk, sehingga menghindari duplikasi kode dan memudahkan pengelolaan tipe asuransi yang berbeda.
 
-### 3. Polymorphism
-<p>Lorem ipsum sir dolor amet.</p>
+**Implementasi:**
 
-### 4. Abstract
-<p>Lorem ipsum sir dolor amet.</p>
+- `Asuransi` sebagai kelas abstrak induk.
+- `Kesehatan` dan `Jiwa` sebagai subclass yang mewarisi `Asuransi`.
+
+### 2. Encapsulation (Enkapsulasi)
+
+Encapsulation menyembunyikan data dengan modifier `private` dan menyediakan akses melalui getter dan setter, sehingga data terlindungi dari akses langsung.
+
+**Implementasi:**
+
+- Kelas `Nasabah` dengan atribut private dan method getter/setter.
+
+### 3. Polymorphism (Polimorfisme)
+
+Polymorphism memungkinkan metode yang sama berperilaku berbeda tergantung objek yang memanggilnya. Method `hitungPremi()` di kelas `Asuransi` di-override di subclass `AsuransiKesehatan` dan `AsuransiJiwa`.
+
+**Implementasi:**
+
+### 4. Abstract (Abstraksi)
+
+Abstraksi menyembunyikan detail implementasi dan hanya menampilkan fitur penting. `Asuransi` adalah kelas abstrak yang mendefinisikan kontrak method `hitungPremi()` yang wajib diimplementasikan subclass.
+
+**Implementasi:**
+
+## Kesimpulan
+
+| Konsep OOP   | Penjelasan Singkat                                                                                 | Implementasi Kasus Kasir Asuransi                                    |
+|-------------|--------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| Inheritance | Kelas anak mewarisi atribut dan metode dari kelas induk, menghindari duplikasi kode               | `Asuransi` → `AsuransiKesehatan`, `AsuransiJiwa`                      |
+| Encapsulation | Menyembunyikan data dengan modifier private dan akses melalui getter/setter                      | Kelas `Nasabah` dengan atribut private dan getter/setter            |
+| Polymorphism | Metode yang sama dapat berperilaku berbeda tergantung objek yang memanggil                       | Method `hitungPremi()` di kelas `Asuransi` di-override di subclass  |
+| Abstract    | Menyembunyikan detail implementasi, menyediakan kontrak method yang harus diimplementasikan       | `Asuransi` sebagai kelas abstrak dengan method abstrak `hitungPremi()` |
+
+---
 
 ## Demo Proyek
 <ul>
