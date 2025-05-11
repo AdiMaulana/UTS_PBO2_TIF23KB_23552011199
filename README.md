@@ -198,5 +198,5 @@ public abstract class Asuransi {
 ## Demo Proyek
 <ul>
   <li>Github: <a href="https://github.com/AdiMaulana/UTS_PBO2_TIF23KB_23552011199/blob/main/insurance/src/main/java/com/insurance/MainApp.java">Github</a></li>
-  <li>Youtube: <a href="">Youtube</a></li>
+  <li>Youtube: <a href="https://youtu.be/CefLaSujmoU">Youtube</a></li>
 </ul>
