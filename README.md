@@ -29,7 +29,54 @@ Inheritance memungkinkan kelas anak mewarisi atribut dan metode dari kelas induk
 **Implementasi:**
 
 - `Asuransi` sebagai kelas abstrak induk.
-- `Kesehatan` dan `Jiwa` sebagai subclass yang mewarisi `Asuransi`.
+- `AsuransiKesehatan` dan `AsuransiJiwa` sebagai subclass yang mewarisi `Asuransi`.
+
+**Implementasi dalam kode :**
+
+```java
+// Superclass abstrak
+public abstract class Asuransi {
+    protected String jenis;
+    protected double premi;
+
+    public abstract double hitungPremi();
+
+    public String getJenis() { return jenis; }
+    public double getPremi() { return premi;}
+}
+
+// Subclass mewarisi Asuransi
+public class AsuransiJiwa extends Asuransi {
+    private double nilaiPertanggungan;
+
+    public AsuransiJiwa(double nilaiPertanggungan) {
+        this.jenis = constant.AS_JIWA;
+        this.nilaiPertanggungan = nilaiPertanggungan;
+    }
+
+    @Override
+    public double hitungPremi() {
+        premi = nilaiPertanggungan * 0.05;
+        return premi;
+    }
+}
+
+public class AsuransiKesehatan extends Asuransi {
+    private double biayaDasar;
+
+    public AsuransiKesehatan(double biayaDasar) {
+        this.jenis = constant.AS_KESEHATAN;
+        this.biayaDasar = biayaDasar;
+    }
+
+    @Override
+    public double hitungPremi() {
+        premi = biayaDasar * 1.2;
+        return premi;
+    }
+}
+ 
+```
 
 ### 2. Encapsulation (Enkapsulasi)
 
