@@ -82,7 +82,34 @@ public class AsuransiKesehatan extends Asuransi {
 
 Encapsulation menyembunyikan data dengan modifier `private` dan menyediakan akses melalui getter dan setter, sehingga data terlindungi dari akses langsung.
 
-**Implementasi:**
+**Implementasi dalam kode:**
+
+```java 
+public class Nasabah {
+    private int id;
+    private String nama;
+    private int umur;
+
+    public Nasabah() {}
+
+    public Nasabah(int id, String nama, int umur) {
+        this.id = id;
+        this.nama = nama;
+        this.umur = umur;
+    }
+
+    // Getter dan Setter untuk mengakses atribut private
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getNama() { return nama; }
+    public void setNama(String nama) { this.nama = nama; }
+
+    public int getUmur() { return umur; }
+    public void setUmur(int umur) { this.umur = umur; }
+}
+
+```
 
 - Kelas `Nasabah` dengan atribut private dan method getter/setter.
 
@@ -90,13 +117,72 @@ Encapsulation menyembunyikan data dengan modifier `private` dan menyediakan akse
 
 Polymorphism memungkinkan metode yang sama berperilaku berbeda tergantung objek yang memanggilnya. Method `hitungPremi()` di kelas `Asuransi` di-override di subclass `AsuransiKesehatan` dan `AsuransiJiwa`.
 
-**Implementasi:**
+**Implementasi dalam kode:**
+
+```java
+// AsuransiKesehatan.class
+@Override
+public double hitungPremi() {
+   premi = biayaDasar * 1.2;
+   return premi;
+}
+
+// AsuransiJiwa.class 
+@Override
+public double hitungPremi() {
+    premi = nilaiPertanggungan * 0.05;
+    return premi;
+}
+
+// Contoh pemanggilan di MainApp.class
+ private static void hitungPremi() {
+        System.out.println("Hitung Premi Asuransi");
+        System.out.print("Pilih jenis asuransi (kesehatan/jiwa): ");
+        String jenis = scanner.nextLine().toLowerCase();
+
+        Asuransi asuransi;
+        if (jenis.equals("kesehatan")) {
+            System.out.print("Masukkan biaya dasar: ");
+            double biaya = scanner.nextDouble();
+            scanner.nextLine();
+            asuransi = new AsuransiKesehatan(biaya);
+            
+        } else if (jenis.equals("jiwa")) {
+            System.out.print("Masukkan nilai pertanggungan: ");
+            double nilai = scanner.nextDouble();
+            scanner.nextLine();
+            asuransi = new AsuransiJiwa(nilai);
+            
+        } else {
+            System.out.println("Jenis asuransi tidak valid!");
+            return;
+        }
+
+        double premi = asuransi.hitungPremi();
+        System.out.println("Premi yang harus dibayar: " + premi);
+    }
+
+```
 
 ### 4. Abstract (Abstraksi)
 
 Abstraksi menyembunyikan detail implementasi dan hanya menampilkan fitur penting. `Asuransi` adalah kelas abstrak yang mendefinisikan kontrak method `hitungPremi()` yang wajib diimplementasikan subclass.
 
-**Implementasi:**
+**Implementasi dalam kode:**
+
+```java
+public abstract class Asuransi {
+    protected String jenis;
+    protected double premi;
+
+    // Method abstrak yang harus diimplementasikan subclass
+    public abstract double hitungPremi();
+
+    public String getJenis() { return jenis; }
+    public double getPremi() { return premi; }
+}
+
+```
 
 ## Kesimpulan
 
