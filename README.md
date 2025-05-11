@@ -19,7 +19,7 @@
 
 Proyek **Kasir Asuransi** ini merupakan aplikasi berbasis Java yang mengelola premi dan klaim asuransi dengan menerapkan konsep **Konsep OOP** berikut: Inheritance, Encapsulation, Polymorphism, dan Abstraction.
 
-# Struktur Project Kasir Asuransi
+## Struktur Project Kasir Asuransi
 ```
 insurance/
 │
